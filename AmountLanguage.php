@@ -21,8 +21,8 @@ class AmountLanguage
 
 	public function __get(string $name)
 	{
-		if (get_class_methods($name))
-			return $name;
+		if (isset($this->$name))
+			return $this->$name;
 		else
 		{
 			$class = '\AmountLanguage\Lang\\' . ucfirst($name);
